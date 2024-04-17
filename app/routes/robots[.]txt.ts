@@ -8,7 +8,7 @@ export const loader = () => {
     User-agent: *
     Allow: /
 
-    Sitemap: http://www.ngodinghouse.com/sitemap.xml
+    Sitemap: https://www.ngodinghouse.com/sitemap.xml
     `;
   // return the text content, a status 200 success response, and set the content type to text/plain
   return new Response(robotText, {
