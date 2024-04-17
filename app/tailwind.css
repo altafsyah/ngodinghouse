@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bayon {
+  font-family: "Bayon", sans-serif;
+}
+
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

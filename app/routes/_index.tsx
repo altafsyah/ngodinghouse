@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import logo1 from "/";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,15 +11,18 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <main>
-      <section id="hero" className="w-full">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h1 className="text-5xl">
+    <>
+      <section
+        id="hero"
+        className="w-full min-h-[80vh] flex flex-col justify-center"
+      >
+        <div className="mx-auto text-center flex flex-col items-center">
+          <h1 className="max-w-4xl text-5xl bayon leading-[80px]">
             WE CRAFTING BIG IDEAS. WEBSITE. APPS.
             <br />
             FOR REAL PEOPLE. FROM REAL PEOPLE
           </h1>
-          <p className="text-xl mt-3">
+          <p className="text-xl mt-3 max-w-xl leading-6">
             Innovative solutions tailored for your success. Unlock your
             potential with our software expertise!
           </p>
@@ -38,6 +42,108 @@ export default function Index() {
           </ul>
         </div>
       </section>
-    </main>
+      <section
+        id="partner"
+        className="w-full bg-black1 py-6 flex justify-center items-center gap-10"
+      >
+        <img src="/images/klarna_dummy.webp" alt="klarna" className="h-10" />
+        <img src="/images/google_dummy.webp" alt="klarna" className="h-10" />
+        <img src="/images/airbnb_dummy.webp" alt="klarna" className="h-10" />
+        <img src="/images/duolingo_dummy.webp" alt="klarna" className="h-10" />
+        <img src="/images/bumble_dummy.webp" alt="MyAgro" className="h-10" />
+      </section>
+      <section id="services" className="w-full py-24">
+        <div className="max-w-7xl mx-auto w-full">
+          <h1 className="text-title font-bold">What we do</h1>
+          <ul className="mt-9 grid grid-cols-3 gap-10">
+            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+              <div className="w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
+                <img
+                  src="/images/ui_icon.svg"
+                  alt="ui"
+                  className="w-6 aspect-square"
+                />
+              </div>
+              <h2 className="text-subtitle mt-5 font-bold">UI/UX Design</h2>
+              <p className="text-2xl mt-2 plus-jakarta-sans">
+                Elevate user experiences with Arsa Studio's cutting-edge UI/UX
+                solutions.
+              </p>
+            </li>
+            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+              <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
+                <img
+                  src="/images/mobile_icon.svg"
+                  alt="ui"
+                  className="w-6 aspect-square"
+                />
+              </div>
+              <h2 className="text-subtitle mt-5 font-bold">
+                Mobile Development
+              </h2>
+              <p className="text-2xl mt-2 plus-jakarta-sans">
+                Revolutionize your digital presence with Arsa Studio's
+                innovative apps. Experience excellence in every tap!
+              </p>
+            </li>
+            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+              <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
+                <img
+                  src="/images/web_icon.svg"
+                  alt="ui"
+                  className="w-6 aspect-square"
+                />
+              </div>
+              <h2 className="text-subtitle mt-5 font-bold">Web Development</h2>
+              <p className="text-2xl mt-2 plus-jakarta-sans">
+                Elevate your digital presence with Arsa Studio's bespoke
+                websites. Transform your online identity today!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        id="about"
+        className="w-full bg-black1 py-12 text-center text-white"
+      >
+        <h1 className="text-title font-bold">About us</h1>
+        <h5 className="text-2xl font-medium mt-5">
+          Discover Our Story: Unveiling the Heartbeat Behind Arsa Studio
+        </h5>
+        <Link
+          to="/about"
+          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block mx-auto rounded-full"
+        >
+          See more
+        </Link>
+      </section>
+      <section id="selected_works" className="w-full py-24 max-w-7xl mx-auto">
+        <div>
+          <h1 className="text-title font-bold">Our Works</h1>
+        </div>
+        <p className="text-2xl font-medium mt-5 max-w-4xl">
+          Dive into our portfolio, witness the fusion of creativity and
+          craftsmanship in every project. Explore Our Works and be inspired to
+          redefine possibilities.
+        </p>
+        <Link
+          to="/works"
+          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
+        >
+          See more
+        </Link>
+      </section>
+      <section
+        id="testimoni"
+        className="w-full py-24 max-w-7xl mx-auto text-center"
+      >
+        <h1 className="text-title font-bold">Our Happy Clients</h1>
+        <p className="text-2xl font-medium mt-5 max-w-6xl">
+          Amplifying Success through Authentic Stories. Hear from Our Clients
+          How Our Software Solutions Propel Their Businesses Forward!
+        </p>
+      </section>
+    </>
   );
 }
