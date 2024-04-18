@@ -2,6 +2,14 @@
 import type { MetaFunction } from "@remix-run/node";
 import { motion } from "framer-motion";
 import { Link } from "@remix-run/react";
+import {
+  aboutImages,
+  partners,
+  services,
+  testimonials,
+  works,
+} from "~/data/home";
+import clsx from "clsx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -69,7 +77,7 @@ export default function Index() {
           </ul>
         </motion.div>
         <motion.div
-          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute"
+          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute overflow-hidden"
           initial={{
             scale: 0,
             filter: "blur(30px)",
@@ -83,9 +91,15 @@ export default function Index() {
             transition: {
               duration: 0.7,
             },
-          }}></motion.div>
+          }}>
+          <img
+            src="/images/hero_1.jfif"
+            alt="Hero 1"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
         <motion.div
-          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute right-0"
+          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute right-0 overflow-hidden"
           initial={{
             scale: 0,
             filter: "blur(30px)",
@@ -99,51 +113,28 @@ export default function Index() {
             transition: {
               duration: 0.7,
             },
-          }}></motion.div>
+          }}>
+          <img
+            src="/images/hero_2.jfif"
+            alt="Hero 1"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
       </section>
       <section
         id="partner"
         className="w-full bg-black1 py-6 flex justify-center items-center gap-10">
-        <motion.img
-          src="/images/klarna_dummy.webp"
-          alt="klarna"
-          className="h-10"
-          initial={{ filter: "blur(30px)" }}
-          whileInView={{ filter: "blur(0px" }}
-          viewport={{ once: true }}
-        />
-        <motion.img
-          src="/images/google_dummy.webp"
-          alt="google"
-          className="h-10"
-          initial={{ filter: "blur(30px)" }}
-          whileInView={{ filter: "blur(0px" }}
-          viewport={{ once: true }}
-        />
-        <motion.img
-          src="/images/airbnb_dummy.webp"
-          alt="airbnb"
-          className="h-10"
-          initial={{ filter: "blur(30px)" }}
-          whileInView={{ filter: "blur(0px" }}
-          viewport={{ once: true }}
-        />
-        <motion.img
-          src="/images/duolingo_dummy.webp"
-          alt="duolingo"
-          className="h-10"
-          initial={{ filter: "blur(30px)" }}
-          whileInView={{ filter: "blur(0px" }}
-          viewport={{ once: true }}
-        />
-        <motion.img
-          src="/images/bumble_dummy.webp"
-          alt="bumble"
-          className="h-10"
-          initial={{ filter: "blur(30px)" }}
-          whileInView={{ filter: "blur(0px" }}
-          viewport={{ once: true }}
-        />
+        {partners.map((partner) => (
+          <motion.img
+            key={partner.name}
+            src={partner.logo}
+            alt={partner.name}
+            className="h-10"
+            initial={{ filter: "blur(30px)" }}
+            whileInView={{ filter: "blur(0px" }}
+            viewport={{ once: true }}
+          />
+        ))}
       </section>
       <section id="services" className="w-full py-24">
         <div className="max-w-7xl mx-auto w-full">
@@ -155,95 +146,42 @@ export default function Index() {
             What we do
           </motion.h1>
           <ul className="mt-9 grid grid-cols-3 gap-10">
-            <motion.li
-              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
-              initial={{
-                opacity: 0,
-                y: 100,
-              }}
-              viewport={{ once: true }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.2,
-                  duration: 0.5,
-                },
-              }}>
-              <div className="w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
-                <img
-                  src="/images/ui_icon.svg"
-                  alt="ui"
-                  className="w-6 aspect-square"
-                />
-              </div>
-              <h2 className="text-subtitle mt-5 font-bold">UI/UX Design</h2>
-              <p className="text-2xl mt-2 plus-jakarta-sans">
-                Elevate user experiences with Arsa Studio's cutting-edge UI/UX
-                solutions.
-              </p>
-            </motion.li>
-            <motion.li
-              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
-              initial={{
-                opacity: 0,
-                y: 100,
-              }}
-              viewport={{ once: true }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.4,
-                  duration: 0.5,
-                },
-              }}>
-              <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-                <img
-                  src="/images/mobile_icon.svg"
-                  alt="ui"
-                  className="w-6 aspect-square"
-                />
-              </div>
-              <h2 className="text-subtitle mt-5 font-bold">
-                Mobile Development
-              </h2>
-              <p className="text-2xl mt-2 plus-jakarta-sans">
-                Revolutionize your digital presence with Arsa Studio's
-                innovative apps. Experience excellence in every tap!
-              </p>
-            </motion.li>
-            <motion.li
-              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
-              initial={{
-                opacity: 0,
-                y: 100,
-              }}
-              viewport={{ once: true }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.6,
-                  duration: 0.5,
-                },
-              }}>
-              <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-                <img
-                  src="/images/web_icon.svg"
-                  alt="ui"
-                  className="w-6 aspect-square"
-                />
-              </div>
-              <h2 className="text-subtitle mt-5 font-bold">Web Development</h2>
-              <p className="text-2xl mt-2 plus-jakarta-sans">
-                Elevate your digital presence with Arsa Studio's bespoke
-                websites. Transform your online identity today!
-              </p>
-            </motion.li>
+            {services.map((service) => (
+              <motion.li
+                key={service.title}
+                className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
+                initial={{
+                  opacity: 0,
+                  y: 100,
+                }}
+                viewport={{ once: true }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.2,
+                    duration: 0.5,
+                  },
+                }}>
+                <div className="w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
+                  <img
+                    src={service.icon}
+                    alt="ui"
+                    className="w-6 aspect-square"
+                  />
+                </div>
+                <h2 className="text-subtitle mt-5 font-bold">
+                  {service.title}
+                </h2>
+                <p className="text-2xl mt-2 plus-jakarta-sans">
+                  {service.description}
+                </p>
+              </motion.li>
+            ))}
           </ul>
         </div>
       </section>
+      {/* Start of About Section */}
       <section
         id="about"
         className="w-full bg-black1 py-12 text-center text-white">
@@ -253,11 +191,41 @@ export default function Index() {
         </h5>
         <Link
           to="/about"
-          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block mx-auto rounded-full">
-          See more
+          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] hover:bg-[#414969] transition-all duration-200 w-fit block mx-auto rounded-full group">
+          <span className="group-hover:scale-125 block transition-all duration-200">
+            See more
+          </span>
         </Link>
+        <div className="mt-20 flex gap-14 justify-center">
+          {aboutImages.map((image, index) => (
+            <motion.div
+              initial={{
+                filter: "blur(30px)",
+              }}
+              whileInView={{
+                filter: "blur(0px)",
+                transition: {
+                  duration: 0.4,
+                },
+              }}
+              viewport={{ once: true }}
+              className={clsx(
+                "w-[300px] h-[375px] rounded-xl overflow-hidden group",
+                index === 0 || index % 2 === 0 ? "mt-14" : "mt-0"
+              )}
+              key={image.alt}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+              />
+            </motion.div>
+          ))}
+        </div>
       </section>
-      <section id="selected_works" className="w-full py-24 max-w-7xl mx-auto">
+      <section
+        id="selected_works"
+        className="w-full py-24 max-w-7xl mx-auto overflow-hidden">
         <div>
           <h1 className="text-title font-bold">Our Works</h1>
         </div>
@@ -271,6 +239,27 @@ export default function Index() {
           className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white">
           See more
         </Link>
+        <div className="mt-20 flex gap-6 justify-center">
+          {works.map((work) => (
+            <div
+              key={(work.image, work.tag)}
+              className="w-[570px] h-[450px] rounded-xl overflow-hidden relative">
+              <img
+                src={work.image}
+                alt={work.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black z-20 top-0 left-0 text-white flex flex-col justify-end p-10 ">
+                <h3 className="text-4xl font-semibold leading-10 urbanist">
+                  {work.title}
+                </h3>
+                <div className="mt-4 px-4 py-2 border border-white w-fit rounded-full bg-white/5 backdrop-blur">
+                  <h5>{work.tag}</h5>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
       <section
         id="testimoni"
@@ -280,6 +269,19 @@ export default function Index() {
           Amplifying Success through Authentic Stories. Hear from Our Clients
           How Our Software Solutions Propel Their Businesses Forward!
         </p>
+        <div className="mt-16 flex gap-12">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="max-w-[335px] w-full h-[270px] rounded-xl bg-gray-500 px-8 py-6 text-left">
+              <h2>"</h2>
+              <h4 className="text-lg">{testimonial.text}</h4>
+              <div className="mt-4">
+                <div className="w-10 aspect-square rounded-full bg-gray-400"></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
