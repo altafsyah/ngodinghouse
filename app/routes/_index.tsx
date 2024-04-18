@@ -1,11 +1,29 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { MetaFunction } from "@remix-run/node";
+import { motion } from "framer-motion";
 import { Link } from "@remix-run/react";
-import logo1 from "/";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "ngodinghouse" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "ngodinghouse || friendly and trusted software house" },
+    {
+      name: "description",
+      content:
+        "NgodingHouse: Your innovative software partner. We specialize in crafting bespoke digital solutions to elevate your business. Let's transform your ideas into powerful software. Contact us today!",
+    },
+    {
+      name: "keywords",
+      content:
+        "software house, web development, mobile development, ui/ux design, software development, ngodinghouse, indonesia, price, website, android",
+    },
+    {
+      name: "author",
+      content: "ngodinghouse",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
   ];
 };
 
@@ -14,9 +32,18 @@ export default function Index() {
     <>
       <section
         id="hero"
-        className="w-full min-h-[80vh] flex flex-col justify-center"
-      >
-        <div className="mx-auto text-center flex flex-col items-center">
+        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden">
+        <motion.div
+          className="mx-auto text-center flex flex-col items-center"
+          initial={{
+            filter: "blur(30px)",
+          }}
+          animate={{
+            filter: "blur(0px)",
+            transition: {
+              duration: 0.7,
+            },
+          }}>
           <h1 className="max-w-4xl text-5xl bayon leading-[80px]">
             WE CRAFTING BIG IDEAS. WEBSITE. APPS.
             <br />
@@ -40,23 +67,109 @@ export default function Index() {
               <h5 className="text-base font-light">Awards</h5>
             </li>
           </ul>
-        </div>
+        </motion.div>
+        <motion.div
+          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute"
+          initial={{
+            scale: 0,
+            filter: "blur(30px)",
+            translateX: 100,
+          }}
+          animate={{
+            scale: 1,
+            filter: "blur(0px)",
+            rotate: 20,
+            translateX: -100,
+            transition: {
+              duration: 0.7,
+            },
+          }}></motion.div>
+        <motion.div
+          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute right-0"
+          initial={{
+            scale: 0,
+            filter: "blur(30px)",
+            translateX: -100,
+          }}
+          animate={{
+            scale: 1,
+            filter: "blur(0px)",
+            rotate: -20,
+            translateX: 100,
+            transition: {
+              duration: 0.7,
+            },
+          }}></motion.div>
       </section>
       <section
         id="partner"
-        className="w-full bg-black1 py-6 flex justify-center items-center gap-10"
-      >
-        <img src="/images/klarna_dummy.webp" alt="klarna" className="h-10" />
-        <img src="/images/google_dummy.webp" alt="klarna" className="h-10" />
-        <img src="/images/airbnb_dummy.webp" alt="klarna" className="h-10" />
-        <img src="/images/duolingo_dummy.webp" alt="klarna" className="h-10" />
-        <img src="/images/bumble_dummy.webp" alt="MyAgro" className="h-10" />
+        className="w-full bg-black1 py-6 flex justify-center items-center gap-10">
+        <motion.img
+          src="/images/klarna_dummy.webp"
+          alt="klarna"
+          className="h-10"
+          initial={{ filter: "blur(30px)" }}
+          whileInView={{ filter: "blur(0px" }}
+          viewport={{ once: true }}
+        />
+        <motion.img
+          src="/images/google_dummy.webp"
+          alt="google"
+          className="h-10"
+          initial={{ filter: "blur(30px)" }}
+          whileInView={{ filter: "blur(0px" }}
+          viewport={{ once: true }}
+        />
+        <motion.img
+          src="/images/airbnb_dummy.webp"
+          alt="airbnb"
+          className="h-10"
+          initial={{ filter: "blur(30px)" }}
+          whileInView={{ filter: "blur(0px" }}
+          viewport={{ once: true }}
+        />
+        <motion.img
+          src="/images/duolingo_dummy.webp"
+          alt="duolingo"
+          className="h-10"
+          initial={{ filter: "blur(30px)" }}
+          whileInView={{ filter: "blur(0px" }}
+          viewport={{ once: true }}
+        />
+        <motion.img
+          src="/images/bumble_dummy.webp"
+          alt="bumble"
+          className="h-10"
+          initial={{ filter: "blur(30px)" }}
+          whileInView={{ filter: "blur(0px" }}
+          viewport={{ once: true }}
+        />
       </section>
       <section id="services" className="w-full py-24">
         <div className="max-w-7xl mx-auto w-full">
-          <h1 className="text-title font-bold">What we do</h1>
+          <motion.h1
+            className="text-title font-bold w-fit"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+            viewport={{ once: true }}>
+            What we do
+          </motion.h1>
           <ul className="mt-9 grid grid-cols-3 gap-10">
-            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+            <motion.li
+              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              viewport={{ once: true }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  duration: 0.5,
+                },
+              }}>
               <div className="w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
                 <img
                   src="/images/ui_icon.svg"
@@ -69,8 +182,22 @@ export default function Index() {
                 Elevate user experiences with Arsa Studio's cutting-edge UI/UX
                 solutions.
               </p>
-            </li>
-            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+            </motion.li>
+            <motion.li
+              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              viewport={{ once: true }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.4,
+                  duration: 0.5,
+                },
+              }}>
               <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
                 <img
                   src="/images/mobile_icon.svg"
@@ -85,8 +212,22 @@ export default function Index() {
                 Revolutionize your digital presence with Arsa Studio's
                 innovative apps. Experience excellence in every tap!
               </p>
-            </li>
-            <li className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow">
+            </motion.li>
+            <motion.li
+              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              viewport={{ once: true }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.6,
+                  duration: 0.5,
+                },
+              }}>
               <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
                 <img
                   src="/images/web_icon.svg"
@@ -99,22 +240,20 @@ export default function Index() {
                 Elevate your digital presence with Arsa Studio's bespoke
                 websites. Transform your online identity today!
               </p>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </section>
       <section
         id="about"
-        className="w-full bg-black1 py-12 text-center text-white"
-      >
+        className="w-full bg-black1 py-12 text-center text-white">
         <h1 className="text-title font-bold">About us</h1>
         <h5 className="text-2xl font-medium mt-5">
           Discover Our Story: Unveiling the Heartbeat Behind Arsa Studio
         </h5>
         <Link
           to="/about"
-          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block mx-auto rounded-full"
-        >
+          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block mx-auto rounded-full">
           See more
         </Link>
       </section>
@@ -129,15 +268,13 @@ export default function Index() {
         </p>
         <Link
           to="/works"
-          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
-        >
+          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white">
           See more
         </Link>
       </section>
       <section
         id="testimoni"
-        className="w-full py-24 max-w-7xl mx-auto text-center"
-      >
+        className="w-full py-24 max-w-7xl mx-auto text-center">
         <h1 className="text-title font-bold">Our Happy Clients</h1>
         <p className="text-2xl font-medium mt-5 max-w-6xl">
           Amplifying Success through Authentic Stories. Hear from Our Clients
