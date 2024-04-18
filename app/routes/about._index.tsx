@@ -10,7 +10,13 @@ export default function About() {
             reality, empowering businesses to thrive in the digital age.
           </h2>
         </div>
-        <div className="w-full h-[500px] bg-gray-300 rounded-xl mt-20"></div>
+        <div className="w-full h-[500px] bg-gray-300 rounded-xl mt-20 overflow-hidden">
+          <img
+            src="/images/cover.webp"
+            alt="cover"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </section>
       <section className="w-full max-w-7xl grid grid-cols-2 mt-20 mx-auto gap-24">
         <div>
