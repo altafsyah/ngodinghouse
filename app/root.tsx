@@ -9,6 +9,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/remix";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -95,6 +97,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </footer>
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
