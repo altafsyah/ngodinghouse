@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/about">Works</Link>
+              <Link to="/works">Works</Link>
             </li>
             <li>
               <Link to="/about">Client</Link>

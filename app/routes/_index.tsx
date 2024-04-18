@@ -281,11 +281,11 @@ export default function Index() {
         className="w-full py-24 max-w-7xl mx-auto text-center"
       >
         <h1 className="text-title font-bold">Our Happy Clients</h1>
-        <p className="text-2xl font-medium mt-5 max-w-6xl">
+        <p className="text-2xl font-medium mt-5 max-w-6xl mx-auto">
           Amplifying Success through Authentic Stories. Hear from Our Clients
           How Our Software Solutions Propel Their Businesses Forward!
         </p>
-        <div className="mt-16 flex gap-12">
+        <div className="mt-16 flex gap-12 justify-center">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}

@@ -71,47 +71,47 @@ export default function About() {
           </div>
           <div className="bg-white drop-shadow border border-[#D1D5DB] rounded-xl px-8 pt-7 pb-20">
             <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-              <h5 className="text-white text-3xl font-medium">1</h5>
+              <h5 className="text-white text-3xl font-medium">2</h5>
             </div>
-            <h4 className="mt-5 text-subtitle font-bold">Introduction</h4>
+            <h4 className="mt-5 text-subtitle font-bold">Research</h4>
             <p className="text-description mt-2 plus-jakarta-sans">
-              Understand client's needs and objectives thoroughly.
+              Gather insights and analyze market trends
             </p>
           </div>
           <div className="bg-white drop-shadow border border-[#D1D5DB] rounded-xl px-8 pt-7 pb-20">
             <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-              <h5 className="text-white text-3xl font-medium">1</h5>
+              <h5 className="text-white text-3xl font-medium">3</h5>
             </div>
-            <h4 className="mt-5 text-subtitle font-bold">Introduction</h4>
+            <h4 className="mt-5 text-subtitle font-bold">Define</h4>
             <p className="text-description mt-2 plus-jakarta-sans">
-              Understand client's needs and objectives thoroughly.
+              Set clear goals and project scope
             </p>
           </div>
           <div className="bg-white drop-shadow border border-[#D1D5DB] rounded-xl px-8 pt-7 pb-20">
             <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-              <h5 className="text-white text-3xl font-medium">1</h5>
+              <h5 className="text-white text-3xl font-medium">4</h5>
             </div>
-            <h4 className="mt-5 text-subtitle font-bold">Introduction</h4>
+            <h4 className="mt-5 text-subtitle font-bold">Develop</h4>
             <p className="text-description mt-2 plus-jakarta-sans">
-              Understand client's needs and objectives thoroughly.
+              Build solutions tailored to client requirements
             </p>
           </div>
           <div className="bg-white drop-shadow border border-[#D1D5DB] rounded-xl px-8 pt-7 pb-20">
             <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-              <h5 className="text-white text-3xl font-medium">1</h5>
+              <h5 className="text-white text-3xl font-medium">5</h5>
             </div>
-            <h4 className="mt-5 text-subtitle font-bold">Introduction</h4>
+            <h4 className="mt-5 text-subtitle font-bold">Testing</h4>
             <p className="text-description mt-2 plus-jakarta-sans">
-              Understand client's needs and objectives thoroughly.
+              Ensure functionality, performance, and quality
             </p>
           </div>
           <div className="bg-white drop-shadow border border-[#D1D5DB] rounded-xl px-8 pt-7 pb-20">
             <div className="w-16 aspect-square rounded-full bg-black1 flex justify-center items-center">
-              <h5 className="text-white text-3xl font-medium">1</h5>
+              <h5 className="text-white text-3xl font-medium">6</h5>
             </div>
-            <h4 className="mt-5 text-subtitle font-bold">Introduction</h4>
+            <h4 className="mt-5 text-subtitle font-bold">Presentation</h4>
             <p className="text-description mt-2 plus-jakarta-sans">
-              Understand client's needs and objectives thoroughly.
+              Deliver the final product with excellence
             </p>
           </div>
         </div>
