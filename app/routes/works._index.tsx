@@ -13,7 +13,10 @@ export default function Works() {
           </h2>
         </div>
       </section>
-      <section id="works" className="w-full max-w-7xl mx-auto mt-20 pb-20 ">
+      <section
+        id="works"
+        className="w-full max-w-7xl mx-auto mt-20 pb-20 font-medium"
+      >
         <div className="flex items-center gap-5">
           <div className="px-8 py-2 border border-black1 rounded-full w-fit">
             All

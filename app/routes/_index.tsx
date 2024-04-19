@@ -17,12 +17,12 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "NgodingHouse: Your innovative software partner. We specialize in crafting bespoke digital solutions to elevate your business. Let's transform your ideas into powerful software. Contact us today!",
+        "NgodingHouse: Your innovative software partner. We specialize in crafting bespoke digital solutions to elevate your business.",
     },
     {
       name: "keywords",
       content:
-        "software house, web development, mobile development, ui/ux design, software development, ngodinghouse, indonesia, price, website, android",
+        "software house pontianak, jasa pembuatan web, jasa pembuatan aplikasi, ui/ux design, website pontianak, ngodinghouse, indonesia, murah, terpercaya",
     },
     {
       name: "author",
@@ -40,7 +40,7 @@ export default function Index() {
     <>
       <section
         id="hero"
-        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden"
+        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden px-5"
       >
         <motion.div
           className="mx-auto text-center flex flex-col items-center"
@@ -54,12 +54,12 @@ export default function Index() {
             },
           }}
         >
-          <h1 className="max-w-4xl text-5xl bayon leading-[80px]">
+          <h1 className="max-w-4xl text-3xl lg:text-5xl bayon leading-10 lg:leading-[80px]">
             WE CRAFTING BIG IDEAS. WEBSITE. APPS.
-            <br />
+            <br className="hidden lg:block" />
             FOR REAL PEOPLE. FROM REAL PEOPLE
           </h1>
-          <p className="text-xl mt-3 max-w-xl leading-6">
+          <p className="text-lg lg:text-xl mt-3 max-w-xl leading-6">
             Innovative solutions tailored for your success. Unlock your
             potential with our software expertise!
           </p>
@@ -79,7 +79,7 @@ export default function Index() {
           </ul>
         </motion.div>
         <motion.div
-          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute overflow-hidden"
+          className="hidden lg:block -z-10 w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute overflow-hidden"
           initial={{
             scale: 0,
             filter: "blur(30px)",
@@ -96,14 +96,13 @@ export default function Index() {
           }}
         >
           <img
-            // src="/images/hero_1.jfif"
-            src="/images/cover.webp"
+            src="/images/hero_1.jfif"
             alt="Hero 1"
             className="w-full h-full object-cover"
           />
         </motion.div>
         <motion.div
-          className="w-[300px] h-[400px] rounded-2xl bg-gray-500 absolute right-0 overflow-hidden"
+          className="hidden lg:block -z-10 w-[200px] h-[300px] md:w-[300px] md:h-[400px] rounded-2xl bg-gray-500 absolute right-0 overflow-hidden"
           initial={{
             scale: 0,
             filter: "blur(30px)",
@@ -120,8 +119,7 @@ export default function Index() {
           }}
         >
           <img
-            // src="/images/hero_2.jfif"
-            src="/images/cover.webp"
+            src="/images/hero_2.jfif"
             alt="Hero 1"
             className="w-full h-full object-cover"
           />
@@ -129,7 +127,7 @@ export default function Index() {
       </section>
       <section
         id="partner"
-        className="w-full bg-black1 py-6 flex justify-center items-center gap-10"
+        className="w-full bg-black1 py-6 flex justify-center items-center gap-10 overflow-hidden"
       >
         {partners.map((partner) => (
           <motion.img
@@ -143,52 +141,53 @@ export default function Index() {
           />
         ))}
       </section>
-      <section id="services" className="w-full py-24">
-        <div className="max-w-7xl mx-auto w-full">
-          <motion.h1
-            className="text-title font-bold w-fit"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
-            viewport={{ once: true }}
-          >
-            What we do
-          </motion.h1>
-          <ul className="mt-9 grid grid-cols-3 gap-10">
-            {services.map((service) => (
-              <motion.li
-                key={service.title}
-                className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
-                initial={{
-                  opacity: 0,
-                  y: 100,
-                }}
-                viewport={{ once: true }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.2,
-                    duration: 0.5,
-                  },
-                }}
-              >
-                <div className="w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
-                  <img
-                    src={service.icon}
-                    alt="ui"
-                    className="w-6 aspect-square"
-                  />
-                </div>
-                <h2 className="text-subtitle mt-5 font-bold">
-                  {service.title}
-                </h2>
-                <p className="text-2xl mt-2 plus-jakarta-sans">
-                  {service.description}
-                </p>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
+      <section
+        id="services"
+        className={clsx("w-full py-24 max-w-7xl mx-auto px-5")}
+      >
+        <motion.h1
+          className="text-5xl lg:text-title font-bold w-fit"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          viewport={{ once: true }}
+        >
+          What we do
+        </motion.h1>
+        <ul className="mt-9 grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+          {services.map((service) => (
+            <motion.li
+              key={service.title}
+              className="p-8 border border-[#D1D5DB] rounded-xl drop-shadow"
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              viewport={{ once: true }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  duration: 0.5,
+                },
+              }}
+            >
+              <div className="w-12 lg:w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
+                <img
+                  src={service.icon}
+                  alt="ui"
+                  className="w-6 aspect-square"
+                />
+              </div>
+              <h2 className="text-2xl lg:text-subtitle mt-5 font-bold">
+                {service.title}
+              </h2>
+              <p className="text-xl lg:text-2xl mt-2 plus-jakarta-sans">
+                {service.description}
+              </p>
+            </motion.li>
+          ))}
+        </ul>
       </section>
       {/* Start of About Section */}
       <section
@@ -197,7 +196,7 @@ export default function Index() {
       >
         <h1 className="text-title font-bold">About us</h1>
         <h5 className="text-2xl font-medium mt-5">
-          Discover Our Story: Unveiling the Heartbeat Behind Arsa Studio
+          Discover Our Story: Unveiling the Heartbeat Behind ngodinghouse
         </h5>
         <Link
           to="/about"
@@ -235,29 +234,30 @@ export default function Index() {
           ))}
         </div>
       </section>
-      <section
-        id="selected_works"
-        className="w-full py-24 max-w-7xl mx-auto overflow-hidden"
-      >
-        <div>
+      <section id="selected_works" className="w-full py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full">
           <h1 className="text-title font-bold">Our Works</h1>
+          <p className="text-2xl font-medium mt-5 max-w-4xl">
+            Dive into our portfolio, witness the fusion of creativity and
+            craftsmanship in every project. Explore Our Works and be inspired to
+            redefine possibilities.
+          </p>
+          <Link
+            to="/works"
+            className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
+          >
+            See more
+          </Link>
         </div>
-        <p className="text-2xl font-medium mt-5 max-w-4xl">
-          Dive into our portfolio, witness the fusion of creativity and
-          craftsmanship in every project. Explore Our Works and be inspired to
-          redefine possibilities.
-        </p>
-        <Link
-          to="/works"
-          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
-        >
-          See more
-        </Link>
+
         <div className="mt-20 flex gap-6 justify-center">
-          {works.map((work) => (
+          {works.map((work, index) => (
             <div
               key={(work.image, work.tag)}
-              className="w-[570px] h-[450px] rounded-xl overflow-hidden relative"
+              className={clsx(
+                "w-[570px] h-[450px] rounded-xl overflow-hidden relative",
+                index === 0 ? "ml-20" : ""
+              )}
             >
               <img
                 src={work.image}
@@ -276,10 +276,7 @@ export default function Index() {
           ))}
         </div>
       </section>
-      <section
-        id="testimoni"
-        className="w-full py-24 max-w-7xl mx-auto text-center"
-      >
+      <section id="testimoni" className="w-full py-24 text-center">
         <h1 className="text-title font-bold">Our Happy Clients</h1>
         <p className="text-2xl font-medium mt-5 max-w-6xl mx-auto">
           Amplifying Success through Authentic Stories. Hear from Our Clients

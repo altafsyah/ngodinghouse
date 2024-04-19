@@ -3,19 +3,19 @@ export const services = [
     icon: "/images/ui_icon.svg",
     title: "UI/UX Design",
     description:
-      "Elevate user experiences with Arsa Studio's cutting-edge UI/UX solutions.",
+      "Elevate user experiences with Our cutting-edge UI/UX solutions.",
   },
   {
     icon: "/images/mobile_icon.svg",
     title: "Mobile Development",
     description:
-      "Revolutionize your digital presence with Arsa Studio's innovative apps. Experience excellence in every tap!",
+      "Revolutionize your digital presence with Our innovative apps. Experience excellence in every tap!",
   },
   {
     icon: "/images/web_icon.svg",
     title: "Web Development",
     description:
-      "Elevate your digital presence with Arsa Studio's bespoke websites. Transform your online identity today!",
+      "Elevate your digital presence with Our bespoke websites. Transform your online identity today!",
   },
 ];
 
@@ -82,20 +82,47 @@ export const works = [
 export const testimonials = [
   {
     id: 1,
-    text: "Thanks to Arsa Studio, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
+    text: "Thanks to ngodinghouse, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
     name: "Delaney Miller",
     client: "Windsor Troy",
   },
   {
     id: 2,
-    text: "Thanks to Arsa Studio, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
+    text: "Thanks to ngodinghouse, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
     name: "Delaney Miller",
     client: "Windsor Troy",
   },
   {
     id: 3,
-    text: "Thanks to Arsa Studio, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
+    text: "Thanks to ngodinghouse, our website now captivates our audience with its stunning design and seamless functionality. Highly recommend their services!",
     name: "Delaney Miller",
     client: "Windsor Troy",
+  },
+];
+
+export const accounts = [
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
+  },
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
+  },
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
+  },
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
+  },
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
+  },
+  {
+    name: "Instagram",
+    icon: "/images/instagram.svg",
   },
 ];

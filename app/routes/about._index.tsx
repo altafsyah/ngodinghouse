@@ -1,3 +1,25 @@
+import { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "ngodinghouse || About" },
+    {
+      name: "description",
+      content:
+        "We're passionate about crafting digital experiences that inspire. With expertise in web and app development, we turn ideas into reality.",
+    },
+    {
+      name: "keywords",
+      content:
+        "web development, app development, digital experience, software solutions",
+    },
+    {
+      name: "author",
+      content: "ngodinghouse",
+    },
+  ];
+};
+
 export default function About() {
   return (
     <>
@@ -18,7 +40,7 @@ export default function About() {
           />
         </div>
       </section>
-      <section className="w-full max-w-7xl grid grid-cols-2 mt-20 mx-auto gap-24">
+      <section className="w-full grid grid-cols-2 mt-20 max-w-7xl mx-auto gap-24">
         <div>
           <h1 className="text-title font-bold">Our Value</h1>
           <h5 className="mt-8 text-2xl font-medium">
