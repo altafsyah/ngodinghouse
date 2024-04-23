@@ -54,8 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </ul>
             <Link
               to="/contact"
-              className="lg:block text-2xl w-fit py-3 px-12 rounded-full bg-[#2C3147] text-white font-medium hidden"
-            >
+              className="lg:block text-2xl w-fit py-3 px-12 rounded-full bg-[#2C3147] text-white font-medium hidden">
               Contact
             </Link>
           </div>
@@ -74,8 +73,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </p>
               <Link
                 to="/contact"
-                className="block text-lg md:text-2xl w-fit py-1 md:py-3 px-6 md:px-12 rounded-full bg-[#2C3147] text-white font-medium mt-5"
-              >
+                className="block text-lg md:text-2xl w-fit py-1 md:py-3 px-6 md:px-12 rounded-full bg-[#2C3147] text-white font-medium mt-5">
                 Start a Project
               </Link>
             </div>
@@ -86,7 +84,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="mt-24 md:mt-56 bg-black1 border-t border-t-white pt-7 pb-12 flex flex-col md:flex-row gap-5 justify-between items-center relative z-20 max-w-7xl w-full mx-auto px-5">
             <h5>© 2024 ngodinghouse, All Rights Reserved.</h5>
             <div className="flex gap-4 items-center">
-              <a href="https://www.instagram.com/ngodinghouse/" target="_blank">
+              <a
+                href="https://www.instagram.com/ngodinghouse/"
+                target="_blank"
+                rel="noreferrer">
                 <img
                   src="/images/instagram.svg"
                   alt="Instagram"

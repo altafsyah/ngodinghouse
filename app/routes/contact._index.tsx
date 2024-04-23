@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Contact() {
   return (
     <>
-      <section className="max-w-7xl mx-auto grid grid-cols-3 gap-32 py-24">
+      {/* <section className="max-w-7xl mx-auto grid grid-cols-3 gap-32 py-24">
         <h1 className="text-title font-bold">Let's Talk</h1>
         <div className="col-span-2">
           <h3 className="text-2xl font-medium">
@@ -38,7 +39,24 @@ export default function Contact() {
             </button>
           </form>
         </div>
+      </section> */}
+      <section
+        id="header"
+        className="w-full max-w-7xl mx-auto pt-20 lg:pt-32 px-5">
+        <div className="">
+          <h1 className="w-full text-3xl lg:text-title font-bold lg:leading-[70px] text-center">
+            We're sorry, this page is under construction.
+          </h1>
+          <a
+            href="https://www.instagram.com/ngodinghouse/"
+            target="_blank"
+            rel="noreferrer"
+            className="block w-full bg-[#2C3147] text-center px-3 py-2 text-white mt-5 rounded-lg">
+            Reach us on Instagram
+          </a>
+        </div>
       </section>
+      <section className="pb-24 lg:pb-32"></section>
     </>
   );
 }
