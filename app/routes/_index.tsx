@@ -6,7 +6,7 @@ import {
   aboutImages,
   partners,
   services,
-  testimonials,
+  // testimonials,
   works,
 } from "~/data/home";
 import clsx from "clsx";
@@ -40,7 +40,8 @@ export default function Index() {
     <>
       <section
         id="hero"
-        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden px-5">
+        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden px-5"
+      >
         <motion.div
           className="mx-auto text-center flex flex-col items-center"
           initial={{
@@ -51,7 +52,8 @@ export default function Index() {
             transition: {
               duration: 0.7,
             },
-          }}>
+          }}
+        >
           <h1 className="max-w-4xl text-3xl lg:text-5xl bayon leading-10 lg:leading-[80px]">
             WE CRAFTING BIG IDEAS. WEBSITE. APPS.
             <br className="hidden lg:block" />
@@ -91,7 +93,8 @@ export default function Index() {
             transition: {
               duration: 0.7,
             },
-          }}>
+          }}
+        >
           <img
             src="/images/hero_1.jfif"
             alt="Hero 1"
@@ -113,7 +116,8 @@ export default function Index() {
             transition: {
               duration: 0.7,
             },
-          }}>
+          }}
+        >
           <img
             src="/images/hero_2.jfif"
             alt="Hero 1"
@@ -123,7 +127,8 @@ export default function Index() {
       </section>
       <section
         id="partner"
-        className="w-full bg-black1 py-6 flex justify-center items-center gap-10 overflow-hidden">
+        className="w-full bg-black1 py-6 flex justify-center items-center gap-10 overflow-hidden"
+      >
         {partners.map((partner) => (
           <motion.img
             key={partner.name}
@@ -138,12 +143,14 @@ export default function Index() {
       </section>
       <section
         id="services"
-        className={clsx("w-full py-24 max-w-7xl mx-auto px-5")}>
+        className={clsx("w-full py-24 container mx-auto px-5")}
+      >
         <motion.h1
           className="text-5xl lg:text-title font-bold w-fit"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
-          viewport={{ once: true }}>
+          viewport={{ once: true }}
+        >
           What we do
         </motion.h1>
         <ul className="mt-9 grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
@@ -163,7 +170,8 @@ export default function Index() {
                   delay: 0.2,
                   duration: 0.5,
                 },
-              }}>
+              }}
+            >
               <div className="w-12 lg:w-16 aspect-square flex justify-center items-center rounded-full bg-black1">
                 <img
                   src={service.icon}
@@ -184,14 +192,16 @@ export default function Index() {
       {/* Start of About Section */}
       <section
         id="about"
-        className="w-full bg-black1 py-12 text-center text-white max-w-7xl mx-auto px-5">
+        className="w-full bg-black1 py-12 text-center text-white mx-auto px-5"
+      >
         <h1 className="text-5xl lg:text-title font-bold">About us</h1>
         <h5 className="text-lg lg:text-2xl font-medium mt-5">
           Discover Our Story: Unveiling the Heartbeat Behind ngodinghouse
         </h5>
         <Link
           to="/about"
-          className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] hover:bg-[#414969] transition-all duration-200 w-fit block mx-auto rounded-full group">
+          className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] hover:bg-[#414969] transition-all duration-200 w-fit block mx-auto rounded-full group"
+        >
           <span className="group-hover:scale-125 block transition-all duration-200">
             See more
           </span>
@@ -213,7 +223,8 @@ export default function Index() {
                 "w-full lg:w-[300px] h-[175px] lg:h-[375px] rounded-xl overflow-hidden group",
                 index === 0 || index % 2 === 0 ? "lg:mt-14" : "mt-0"
               )}
-              key={image.alt}>
+              key={image.alt}
+            >
               <img
                 src={image.src}
                 alt={image.alt}
@@ -225,8 +236,9 @@ export default function Index() {
       </section>
       <section
         id="selected_works"
-        className="w-full py-12 lg:py-24 max-w-7xl mx-auto px-5 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full">
+        className="w-full py-12 lg:py-24 container mx-auto px-5 overflow-hidden"
+      >
+        <div className="mx-auto w-full">
           <h1 className="text-5xl lg:text-title font-bold">Our Works</h1>
           <p className="text-base lg:text-2xl font-medium mt-5 max-w-4xl">
             Dive into our portfolio, witness the fusion of creativity and
@@ -235,19 +247,20 @@ export default function Index() {
           </p>
           <Link
             to="/works"
-            className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white">
+            className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
+          >
             See more
           </Link>
         </div>
 
-        <div className="mt-20 flex flex-col lg:flex-row gap-6 justify-center">
-          {works.map((work, index) => (
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {works.map((work) => (
             <div
               key={(work.image, work.tag)}
               className={clsx(
-                "w-full lg:w-[570px] h-[450px] rounded-xl overflow-hidden relative",
-                index === 0 ? "ml-0 lg:ml-20" : ""
-              )}>
+                "w-full h-[300px] lg:h-[450px] rounded-xl overflow-hidden relative"
+              )}
+            >
               <img
                 src={work.image}
                 alt={work.title}
@@ -265,9 +278,10 @@ export default function Index() {
           ))}
         </div>
       </section>
-      <section
+      {/* <section
         id="testimoni"
-        className="w-full py-12 lg:py-24 max-w-7xl mx-auto px-5 overflow-hidden text-center">
+        className="w-full py-12 lg:py-24 max-w-7xl mx-auto px-5 overflow-hidden text-center"
+      >
         <h1 className="text-5xl lg:text-title font-bold">Our Happy Clients</h1>
         <p className="text-base lg:text-2xl font-medium mt-5 max-w-6xl mx-auto">
           Amplifying Success through Authentic Stories. Hear from Our Clients
@@ -277,7 +291,8 @@ export default function Index() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="max-w-[335px] w-full min-h-[270px] rounded-xl bg-white border border-[#D1D5DB] px-8 py-6 text-left">
+              className="max-w-[335px] w-full min-h-[270px] rounded-xl bg-white border border-[#D1D5DB] px-8 py-6 text-left"
+            >
               <img src="/images/quote.svg" alt="quote" className="w-6 h-6" />
               <h4 className="text-lg mt-3">{testimonial.text}</h4>
               <div className="mt-4 flex items-center gap-3 w-full">
@@ -290,7 +305,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

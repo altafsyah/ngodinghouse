@@ -26,7 +26,8 @@ export default function About() {
     <>
       <section
         id="hero"
-        className="w-full max-w-7xl mx-auto pt-20 lg:pt-32 px-5">
+        className="w-full container mx-auto pt-20 lg:pt-32 px-5"
+      >
         <div className="flex flex-col lg:flex-row">
           <h1 className="w-full text-5xl lg:text-title font-bold">About Us</h1>
           <h2 className="text-lg lg:text-2xl font-medium max-w-4xl mt-5 lg:mt-0">
@@ -43,7 +44,7 @@ export default function About() {
           />
         </div>
       </section>
-      <section className="w-full grid grid-cols-1 lg:grid-cols-2 mt-20 max-w-7xl mx-auto gap-12 lg:gap-24 px-5">
+      <section className="w-full grid grid-cols-1 lg:grid-cols-2 mt-20 container mx-auto gap-12 lg:gap-24 px-5">
         <div>
           <h1 className="text-5xl lg:text-title font-bold">Our Value</h1>
           <h5 className="mt-4 lg:mt-8 text-lg lg:text-2xl font-medium">
@@ -79,7 +80,8 @@ export default function About() {
       </section>
       <section
         id="process"
-        className="w-full max-w-7xl mx-auto mt-20 pb-24 px-5">
+        className="w-full container mx-auto mt-20 pb-24 px-5"
+      >
         <h1 className="text-5xl lg:text-title font-bold">Our Process</h1>
         <h5 className="mt-2 text-xl lg:text-2xl font-medium">
           We process integrates creativity, collaboration, and precision to
