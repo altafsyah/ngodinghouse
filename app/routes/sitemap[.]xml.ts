@@ -21,7 +21,7 @@ const renderXML = () => {
     <url>
       <loc>${url}/about</loc>
     </url>
-<url>
+    <url>
       <loc>${url}/works</loc>
     </url>
   </urlset>`;

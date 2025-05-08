@@ -6,7 +6,7 @@ import {
   aboutImages,
   partners,
   services,
-  testimonials,
+  // testimonials,
   works,
 } from "~/data/home";
 import clsx from "clsx";
@@ -194,13 +194,13 @@ export default function Index() {
         id="about"
         className="w-full bg-black1 py-12 text-center text-white mt-24"
       >
-        <h1 className="text-title font-bold">About us</h1>
-        <h5 className="text-2xl font-medium mt-5">
+        <h1 className="text-5xl lg:text-title font-bold">About us</h1>
+        <h5 className="text-lg lg:text-2xl font-medium mt-5">
           Discover Our Story: Unveiling the Heartbeat Behind ngodinghouse
         </h5>
         <Link
           to="/about"
-          className="text-xl mt-10 px-20 py-3 bg-[#2C3147] hover:bg-[#414969] transition-all duration-200 w-fit block mx-auto rounded-full group"
+          className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] hover:bg-[#414969] transition-all duration-200 w-fit block mx-auto rounded-full group"
         >
           <span className="group-hover:scale-125 block transition-all duration-200">
             See more
@@ -220,8 +220,8 @@ export default function Index() {
               }}
               viewport={{ once: true }}
               className={clsx(
-                "w-[300px] h-[375px] rounded-xl overflow-hidden group",
-                index === 0 || index % 2 === 0 ? "mt-14" : "mt-0"
+                "w-full lg:w-[300px] h-[175px] lg:h-[375px] rounded-xl overflow-hidden group",
+                index === 0 || index % 2 === 0 ? "lg:mt-14" : "mt-0"
               )}
               key={image.alt}
             >
@@ -247,7 +247,7 @@ export default function Index() {
           </p>
           <Link
             to="/works"
-            className="text-xl mt-10 px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
+            className="text-base lg:text-xl mt-10 px-10 lg:px-20 py-3 bg-[#2C3147] w-fit block rounded-full text-white"
           >
             See more
           </Link>
@@ -266,7 +266,7 @@ export default function Index() {
                 alt={work.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black z-20 top-0 left-0 text-white flex flex-col justify-end p-10 ">
+              <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black z-20 top-0 left-0 text-white flex flex-col justify-end p-5 lg:-10 ">
                 <h3 className="text-4xl font-semibold leading-10 urbanist">
                   {work.title}
                 </h3>
@@ -278,13 +278,16 @@ export default function Index() {
           ))}
         </div>
       </section>
-      <section id="testimoni" className="w-full py-24 text-center">
-        <h1 className="text-title font-bold">Our Happy Clients</h1>
-        <p className="text-2xl font-medium mt-5 max-w-6xl mx-auto">
+      {/* <section
+        id="testimoni"
+        className="w-full py-12 lg:py-24 max-w-7xl mx-auto px-5 overflow-hidden text-center"
+      >
+        <h1 className="text-5xl lg:text-title font-bold">Our Happy Clients</h1>
+        <p className="text-base lg:text-2xl font-medium mt-5 max-w-6xl mx-auto">
           Amplifying Success through Authentic Stories. Hear from Our Clients
           How Our Software Solutions Propel Their Businesses Forward!
         </p>
-        <div className="mt-16 flex gap-12 justify-center">
+        <div className="mt-16 flex flex-col lg:flex-row gap-12 justify-center">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -302,7 +305,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
