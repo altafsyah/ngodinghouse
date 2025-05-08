@@ -7,5 +7,7 @@ import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 installGlobals();
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths(), netlifyPlugin()],
+  plugins: [remix({
+    basename: ''
+  }), tsconfigPaths(), netlifyPlugin()],
 });
