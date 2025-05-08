@@ -40,7 +40,7 @@ export default function Index() {
     <>
       <section
         id="hero"
-        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden px-5"
+        className="w-full min-h-[80vh] flex flex-col justify-center relative overflow-x-hidden p-10"
       >
         <motion.div
           className="mx-auto text-center flex flex-col items-center"
@@ -143,7 +143,7 @@ export default function Index() {
       </section>
       <section
         id="services"
-        className={clsx("w-full py-24 max-w-7xl mx-auto px-5")}
+        className={clsx("w-full p-10 container mx-auto mt-24")}
       >
         <motion.h1
           className="text-5xl lg:text-title font-bold w-fit"
@@ -192,7 +192,7 @@ export default function Index() {
       {/* Start of About Section */}
       <section
         id="about"
-        className="w-full bg-black1 py-12 text-center text-white"
+        className="w-full bg-black1 py-12 text-center text-white mt-24"
       >
         <h1 className="text-title font-bold">About us</h1>
         <h5 className="text-2xl font-medium mt-5">
@@ -206,7 +206,7 @@ export default function Index() {
             See more
           </span>
         </Link>
-        <div className="mt-20 flex gap-14 justify-center">
+        <div className="container mx-auto w-full mt-20 flex gap-14 justify-center">
           {aboutImages.map((image, index) => (
             <motion.div
               initial={{
@@ -234,8 +234,11 @@ export default function Index() {
           ))}
         </div>
       </section>
-      <section id="selected_works" className="w-full py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto w-full">
+      <section
+        id="selected_works"
+        className="container mx-auto w-full mt-24 overflow-hidden p-10"
+      >
+        <div className="w-full">
           <h1 className="text-title font-bold">Our Works</h1>
           <p className="text-2xl font-medium mt-5 max-w-4xl">
             Dive into our portfolio, witness the fusion of creativity and
@@ -250,13 +253,12 @@ export default function Index() {
           </Link>
         </div>
 
-        <div className="mt-20 flex gap-6 justify-center">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {works.map((work, index) => (
             <div
               key={(work.image, work.tag)}
               className={clsx(
-                "w-[570px] h-[450px] rounded-xl overflow-hidden relative",
-                index === 0 ? "ml-20" : ""
+                "w-full h-[450px] rounded-xl overflow-hidden relative"
               )}
             >
               <img
